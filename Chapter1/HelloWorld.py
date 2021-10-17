@@ -7,6 +7,9 @@ polly = boto3.client('polly',
                       aws_secret_access_key=''
                       )
 
+#Implicit Client Configuration
+polly = boto3.client('polly')
+
 result = polly.synthesize_speech(Text='Hello World!',
 OutputFormat='mp3',
 VoiceId='Aditi')
